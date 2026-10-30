@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors Lizard Spock</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" >
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <h1>Rock Paper Scissors<br>Lizard Spock</h1>
+
+  <div class="scoreboard">
+    <div class="score-item">
+      <div class="score-label p1">P1 WINS</div>
+      <div class="score-value p1" id="p1-score">0</div>
+    </div>
+    <div class="score-item">
+      <div class="score-label tie">TIE</div>
+      <div class="score-value tie" id="tie-score">0</div>
+    </div>
+    <div class="score-item">
+      <div class="score-label p2">P2 WINS</div>
+      <div class="score-value p2" id="p2-score">0</div>
+    </div>
+  </div>
+
+  <div class="game-area">
+    <div class="turn-indicator warn" id="turn-indicator">PRIVACY CHECK</div>
+
+    <div class="result-area" id="result-area">
+      <!-- filled by JS -->
+    </div>
+
+    <div class="actions">
+      <button class="btn btn-primary" id="confirm-btn">CONFIRM</button>
+      <button class="btn btn-primary" id="final-btn" style="display: none;">FINAL RESULTS…</button>
+      <button class="btn btn-primary" id="next-btn" style="display: none;">NEXT ROUND</button>
+      <button class="btn btn-secondary" id="reset-btn">RESET</button>
+    </div>
+  </div>
+
+  <div class="choices-area hidden" id="choices-area">
+    <div class="choices" id="choices">
+      <button class="choice-btn rock" data-choice="rock" title="Rock">
+        <span class="emoji">✊</span>
+        <span class="label">ROCK</span>
+      </button>
+      <button class="choice-btn paper" data-choice="paper" title="Paper">
+        <span class="emoji">✋</span>
+        <span class="label">PAPER</span>
+      </button>
+      <button class="choice-btn scissors" data-choice="scissors" title="Scissors">
+        <span class="emoji">✌️</span>
+        <span class="label">SCISSORS</span>
+      </button>
+      <button class="choice-btn lizard" data-choice="lizard" title="Lizard">
+        <span class="emoji">🦎</span>
+        <span class="label">LIZARD</span>
+      </button>
+      <button class="choice-btn spock" data-choice="spock" title="Spock">
+        <span class="emoji">🖖</span>
+        <span class="label">SPOCK</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="footer">
+    <a id="rules-link">don't know how to play?<br>read the rules!</a>
+  </div>
+
+  <!-- Rules Modal -->
+  <div class="modal-overlay" id="rules-modal">
+    <div class="modal">
+      <h2>THE RULES</h2>
+      <ul>
+        <li>Scissors cuts Paper</li>
+        <li>Paper covers Rock</li>
+        <li>Rock crushes Lizard</li>
+        <li>Lizard poisons Spock</li>
+        <li>Spock smashes Scissors</li>
+        <li>Scissors decapitates Lizard</li>
+        <li>Lizard eats Paper</li>
+        <li>Paper disproves Spock</li>
+        <li>Spock vaporizes Rock</li>
+        <li>Rock crushes Scissors</li>
+        <li><h2>HAVE FUN!</h2></li>
+      </ul>
+      <button class="modal-close" id="modal-close">CLOSE</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
